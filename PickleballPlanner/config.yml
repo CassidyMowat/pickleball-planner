@@ -1,0 +1,13 @@
+---
+logging:
+  level: INFO
+  loggers:
+    com.pickleball-planner: DEBUG
+
+database:
+  driverClass: org.postgresql.Driver
+
+  user: pickleballPlanner
+  password: password
+
+  url: jdbc:postgresql://localhost:5432/
