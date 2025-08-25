@@ -41,5 +41,37 @@ public class Game {
         this.id = id;
     }
 
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public LocalDate getGameDate() {
+        return gameDate;
+    }
+
+    public void setGameDate(LocalDate gameDate) {
+        this.gameDate = gameDate;
+    }
+
+    public String getGameLocation() {
+        return gameLocation;
+    }
+
+    public void setGameLocation(String gameLocation) {
+        this.gameLocation = gameLocation;
+    }
+
+    public String getGameDescription() {
+        return gameDescription;
+    }
+
+    public void setGameDescription(String gameDescription) {
+        this.gameDescription = gameDescription;
+    }
+
 
 }
