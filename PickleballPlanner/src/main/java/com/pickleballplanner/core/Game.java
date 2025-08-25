@@ -1,0 +1,45 @@
+package com.pickleballplanner.core;
+
+import java.time.LocalDate;
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "games")
+public class Game {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+
+    @Column(name = "title")
+    private String title;
+
+    @Column(name = "game_date")
+    private LocalDate gameDate;
+
+    @Column(name = "game_location")
+    private String gameLocation;
+
+    @Column(name = "game_description")
+    private String gameDescription;
+
+    public Game() {}
+
+    public Game(String title, LocalDate gameDate, String gameLocation, String gameDescription) {
+        this.title = title;
+        this.gameDate = gameDate;
+        this.gameLocation = gameLocation;
+        this.gameDescription = gameDescription;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+
+}
