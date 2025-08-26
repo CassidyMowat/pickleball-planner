@@ -1,3 +1,9 @@
+com\pickleballplanner\db\dao\PlayerDAO.class
+com\pickleballplanner\resources\PlayerResource.class
+com\pickleballplanner\db\dao\GameDAO.class
 com\pickleballplanner\PickleballPlannerApplication.class
 com\pickleballplanner\PickleballPlannerConfiguration.class
+com\pickleballplanner\core\Player.class
+com\pickleballplanner\PickleballPlannerApplication$1.class
 com\pickleballplanner\resources\GamesResource.class
+com\pickleballplanner\core\Game.class

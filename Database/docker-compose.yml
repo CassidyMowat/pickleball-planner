@@ -1,0 +1,29 @@
+services:
+  db:
+    image: postgres:latest
+    container_name: pickleball-planner-db
+    environment:
+      - POSTGRES_USER=dbUser
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=pickleballPlanner
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    restart: always
+  
+  java-app:
+    image: openjdk:11-jre-slim 
+    container_name: java-app-container
+    ports:
+      - "8080:8080"
+    volumes:
+      - ../PickleballPlanner/target:/app
+      - ../PickleballPlanner/config.yml:/app/config.yml
+    working_dir: /app
+    command: ["java", "-jar", "PickleballPlanner-0.0.1.jar", "server", "config.yml"]
+    restart: always
+
+volumes:
+  db_data:

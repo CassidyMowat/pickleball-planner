@@ -1,11 +1,14 @@
 package com.pickleballplanner.core;
 
 import java.time.LocalDate;
-
 import jakarta.persistence.*;
 
 @Entity
 @Table(name = "games")
+@NamedQuery(
+    name = "Game.findAll",
+    query = "SELECT g FROM Game g"
+)
 public class Game {
 
     @Id
@@ -72,6 +75,5 @@ public class Game {
     public void setGameDescription(String gameDescription) {
         this.gameDescription = gameDescription;
     }
-
 
 }
